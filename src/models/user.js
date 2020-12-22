@@ -31,10 +31,6 @@ module.exports = (sequelize, Sequelize) => {
           msg: 'Password must be 6-64 in length'
         }
       }
-    },
-    isPassword: {
-      type: Sequelize.BOOLEAN,
-      defaultValue: true
     }
   }, {
     tableName: 'users'
