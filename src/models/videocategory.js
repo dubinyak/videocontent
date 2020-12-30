@@ -1,7 +1,12 @@
 'use strict';
 
 module.exports = (sequelize, Sequelize) => {
-  const videocategories = sequelize.define('videocategories', {
+  const videocategory = sequelize.define('videocategory', {
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     videoId: {
       type: Sequelize.INTEGER,
       primaryKey: true
@@ -16,10 +21,10 @@ module.exports = (sequelize, Sequelize) => {
     timestamps: false
   });
 
-  videocategories.associate = (models) => {
-    videocategories.belongsTo(models.video);
-    videocategories.belongsTo(models.category);
+  videocategory.associate = (models) => {
+    videocategory.belongsTo(models.video);
+    videocategory.belongsTo(models.category);
   };
 
-  return videocategories;
+  return videocategory;
 };

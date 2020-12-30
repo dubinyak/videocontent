@@ -37,7 +37,7 @@ module.exports = (sequelize, Sequelize) => {
 
   video.associate = (models) => {
     video.belongsTo(models.user);
-    video.hasMany(models.videocategories);
+    video.hasMany(models.videocategory);
   };
 
   return video;

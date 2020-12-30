@@ -19,7 +19,7 @@ module.exports = (sequelize, Sequelize) => {
   });
 
   category.associate = (models) => {
-    category.hasMany(models.videocategories);
+    category.hasMany(models.videocategory);
   };
 
   return category;
